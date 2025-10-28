@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { products } from "@/lib/products";
+import { products, type Product } from "@/lib/products";
 import { ProductCard } from "./ProductCard";
 
 type ProductShowcaseProps = {
