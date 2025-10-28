@@ -162,7 +162,6 @@ function PaymentRequestButtonInner({
               type: "buy",
               theme: "dark",
               height: "48px",
-              borderRadius: "9999px",
             },
           },
         }}
