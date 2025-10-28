@@ -31,7 +31,6 @@ type PaymentRequestButtonProps = {
   items: CartLineItem[];
   amount: number;
   onSuccess: () => void;
-  disabled: boolean;
   setStatus: (status: string | null) => void;
 };
 
@@ -39,7 +38,6 @@ function PaymentRequestButtonInner({
   items,
   amount,
   onSuccess,
-  disabled,
   setStatus,
 }: PaymentRequestButtonProps) {
   const stripe = useStripe();
@@ -165,7 +163,6 @@ function PaymentRequestButtonInner({
             },
           },
         }}
-        disabled={disabled}
       />
     </div>
   );
@@ -292,7 +289,6 @@ export function CheckoutSection({ items, onClear }: CheckoutSectionProps) {
             onSuccess={() => {
               onClear();
             }}
-            disabled={items.length === 0}
             setStatus={setStatus}
           />
 
