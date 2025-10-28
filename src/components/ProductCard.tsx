@@ -14,11 +14,11 @@ type ProductCardProps = {
 
 export function ProductCard({ product, index, onAdd }: ProductCardProps) {
   const [justAdded, setJustAdded] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     return () => {
-      if (timeoutRef.current) {
+      if (timeoutRef.current !== null) {
         clearTimeout(timeoutRef.current);
       }
     };
@@ -27,10 +27,13 @@ export function ProductCard({ product, index, onAdd }: ProductCardProps) {
   const handleAdd = () => {
     onAdd(product);
     setJustAdded(true);
-    if (timeoutRef.current) {
+    if (timeoutRef.current !== null) {
       clearTimeout(timeoutRef.current);
     }
-    timeoutRef.current = setTimeout(() => setJustAdded(false), 1400);
+    timeoutRef.current = setTimeout(() => {
+      setJustAdded(false);
+      timeoutRef.current = null;
+    }, 1400);
   };
 
   return (
