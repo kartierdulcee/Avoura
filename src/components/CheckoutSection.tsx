@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   loadStripe,
   type PaymentRequestPaymentMethodEvent,
-  type StripePaymentRequest,
+  type PaymentRequest as StripePaymentRequest,
   type Stripe,
 } from "@stripe/stripe-js";
 import {
