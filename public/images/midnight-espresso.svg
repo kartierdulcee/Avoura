@@ -1,0 +1,19 @@
+<svg width="420" height="420" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="espresso-glow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#201916" stop-opacity="0.85"/>
+      <stop offset="70%" stop-color="#0b0806" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#070605" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="espresso-cookie" cx="55%" cy="45%" r="52%">
+      <stop offset="0%" stop-color="#4b362b"/>
+      <stop offset="100%" stop-color="#1e120d"/>
+    </radialGradient>
+  </defs>
+  <rect width="420" height="420" fill="#070605"/>
+  <circle cx="210" cy="210" r="190" fill="url(#espresso-glow)"/>
+  <circle cx="210" cy="210" r="145" fill="url(#espresso-cookie)"/>
+  <circle cx="170" cy="180" r="12" fill="#c79d56" opacity="0.45"/>
+  <circle cx="240" cy="205" r="9" fill="#c79d56" opacity="0.38"/>
+  <circle cx="205" cy="250" r="11" fill="#c79d56" opacity="0.35"/>
+</svg>

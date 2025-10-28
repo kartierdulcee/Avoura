@@ -1,0 +1,19 @@
+<svg width="420" height="420" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="pistachio-glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#f6efe3" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#f2dfc8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#070605" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pistachio-cookie" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f3d4a8"/>
+      <stop offset="100%" stop-color="#af7b45"/>
+    </radialGradient>
+  </defs>
+  <rect width="420" height="420" fill="#070605"/>
+  <circle cx="210" cy="210" r="180" fill="url(#pistachio-glow)"/>
+  <circle cx="210" cy="210" r="140" fill="url(#pistachio-cookie)"/>
+  <circle cx="180" cy="185" r="20" fill="#5f7d4a" opacity="0.55"/>
+  <circle cx="235" cy="210" r="14" fill="#5f7d4a" opacity="0.5"/>
+  <circle cx="200" cy="250" r="16" fill="#5f7d4a" opacity="0.45"/>
+</svg>

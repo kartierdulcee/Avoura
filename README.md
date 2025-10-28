@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <h1>Auvora - Cookies, Elevated</h1>
+  <p>Luxurious one-page experience for a premium cookie house. Built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and Stripe.</p>
+</div>
 
-## Getting Started
+## ✨ Features
+- Hero with animated gradients and refined typography (Playfair Display + Inter)
+- Curated cookie collection with motion-rich cards and cart management
+- Stripe Checkout plus Tap-to-Pay via Payment Request Button (Apple Pay & Google Pay)
+- Scroll-triggered storytelling and minimal footer with Instagram touchpoint
+- Fully responsive, whitespace-forward layout ready for Vercel deployment
 
-First, run the development server:
+## 🚀 Getting Started
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Copy the environment template and add your Stripe keys:
+   ```bash
+   cp .env.example .env.local
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Visit `http://localhost:3000` to explore the experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project uses the Next.js App Router. All sections live inside `src/components`, while API routes reside under `src/app/api`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔐 Environment Variables
+| Variable | Description |
+| -------- | ----------- |
+| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Stripe publishable key used on the client for Elements and Tap-to-Pay. |
+| `STRIPE_SECRET_KEY` | Stripe secret key for creating Checkout sessions and PaymentIntents. |
+| `NEXT_PUBLIC_SITE_URL` | (Optional) Absolute production URL for generating Stripe success/cancel redirects. |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> Apple Pay and Google Pay require a verified domain. Stripe's dashboard includes step-by-step domain verification for Tap-to-Pay.
 
-## Learn More
+## 💳 Stripe Configuration
+- Checkout flow: `/api/checkout` creates a Stripe Checkout Session.
+- Tap-to-Pay: `/api/payment-intent` provisions PaymentIntents for the Payment Request Button.
+- Update `src/lib/products.ts` to adjust product catalogue, pricing, or imagery.
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Available Scripts
+| Command | Description |
+| ------- | ----------- |
+| `npm run dev` | Start the local dev server. |
+| `npm run build` | Create a production build. |
+| `npm run start` | Serve the production build. |
+| `npm run lint` | Run linting with the Next.js config. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ☁️ Deploying on Vercel
+1. Push this repository to GitHub (or your preferred Git host).
+2. Import the project in [Vercel](https://vercel.com/import).
+3. Provide the environment variables above within the Vercel dashboard.
+4. Trigger a deployment - Vercel handles build and CDN distribution automatically.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Notes
+- Imagery lives in `public/images` and can be swapped for photography when ready.
+- Tailwind CSS v4 is configured via `src/app/globals.css` using `@theme` tokens for the palette.
+- Cart quantities cap at 5 units per cookie to maintain an intimate tasting set - adjust in `LandingPage.tsx` if needed.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Enjoy crafting indulgent digital experiences with Auvora. 🥂
