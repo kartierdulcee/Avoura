@@ -10,7 +10,7 @@ export function StorySection() {
     >
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-[#1a1612] via-transparent to-[#d6b06a1a] opacity-80"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-[#ff4fa220] via-transparent to-[#ffffff70] opacity-80"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.9 }}
         transition={{ duration: 1.6 }}
@@ -41,7 +41,7 @@ export function StorySection() {
         </motion.h3>
 
         <motion.p
-          className="mt-6 text-sm leading-7 text-foreground/65 sm:text-base"
+          className="mt-6 text-sm leading-7 text-foreground/70 sm:text-base"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}

@@ -37,7 +37,7 @@ export function SiteFooter() {
             <Link
               key={link.label}
               href={link.href}
-              className="transition hover:text-foreground"
+              className="transition hover:text-accent"
             >
               {link.label}
             </Link>
@@ -46,7 +46,7 @@ export function SiteFooter() {
             href="https://instagram.com/auvora"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-foreground/10 transition hover:border-foreground/40 hover:text-foreground"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-accent/60 text-accent transition hover:border-accent hover:text-foreground"
             aria-label="Instagram"
           >
             <InstagramIcon />

@@ -38,7 +38,7 @@ export function ProductCard({ product, index, onAdd }: ProductCardProps) {
 
   return (
     <motion.article
-      className="group relative flex h-full flex-col overflow-hidden rounded-[32px] border border-foreground/10 bg-accent/40 backdrop-blur"
+      className="group relative flex h-full flex-col overflow-hidden rounded-[32px] border border-muted/40 bg-surface shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)]"
       initial={{ opacity: 0, y: 48 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.35 }}
@@ -73,7 +73,7 @@ export function ProductCard({ product, index, onAdd }: ProductCardProps) {
           <h3 className="font-serif text-2xl tracking-tight text-foreground">
             {product.name}
           </h3>
-          <p className="text-sm leading-6 text-foreground/65">
+          <p className="text-sm leading-6 text-foreground/70">
             {product.description}
           </p>
         </div>
@@ -85,10 +85,10 @@ export function ProductCard({ product, index, onAdd }: ProductCardProps) {
           <button
             type="button"
             onClick={handleAdd}
-            className="group relative inline-flex items-center gap-3 rounded-full border border-foreground/15 bg-foreground/5 px-5 py-2 text-xs uppercase tracking-[0.4em] text-foreground/70 transition hover:border-foreground/40 hover:bg-foreground/15"
+            className="group relative inline-flex items-center gap-3 rounded-full border border-transparent bg-accent px-5 py-2 text-xs uppercase tracking-[0.4em] text-surface transition hover:bg-foreground hover:text-surface"
           >
             {justAdded ? "Added" : "Add to Cart"}
-            <span className="block h-[1px] w-6 bg-foreground/40 transition group-hover:w-8 group-hover:bg-foreground" />
+            <span className="block h-[1px] w-6 bg-surface/70 transition group-hover:w-8 group-hover:bg-surface" />
           </button>
         </div>
       </div>

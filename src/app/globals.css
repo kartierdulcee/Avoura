@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #070605;
-  --foreground: #f6efe3;
-  --muted: #141110;
-  --gold: #c79d56;
-  --cream: #f2dfc8;
-  --accent: #2c251f;
+  --background: #fce8d8;
+  --foreground: #000000;
+  --muted: #d3d3d3;
+  --accent: #ff4fa2;
+  --surface: #ffffff;
+  --contrast: #000000;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
-  --color-gold: var(--gold);
-  --color-cream: var(--cream);
   --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-contrast: var(--contrast);
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
 }
@@ -47,12 +47,12 @@ a {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--gold) 35%, transparent);
-  color: var(--foreground);
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
+  color: var(--surface);
 }
 
-.gold-text {
-  background: linear-gradient(120deg, #d7b46b 0%, #f3e6c6 45%, #c79d56 100%);
+.accent-text {
+  background: linear-gradient(120deg, #ff4fa2 0%, #ff82be 50%, #ff4fa2 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;

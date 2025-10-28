@@ -175,7 +175,7 @@ const PaymentRequestButton = (props: PaymentRequestButtonProps) => {
 
   if (!stripePromise) {
     return (
-      <div className="rounded-3xl border border-dashed border-foreground/20 px-6 py-4 text-center text-xs text-foreground/45">
+      <div className="rounded-3xl border border-dashed border-muted/70 bg-background/40 px-6 py-4 text-center text-xs text-foreground/60">
         Add your Stripe publishable key to enable Tap-to-Pay quick checkout.
       </div>
     );
@@ -238,7 +238,7 @@ export function CheckoutSection({ items, onClear }: CheckoutSectionProps) {
       className="relative bg-background px-6 pb-24 pt-12 sm:px-12 lg:px-24"
     >
       <motion.div
-        className="mx-auto flex max-w-4xl flex-col gap-10 rounded-[36px] border border-foreground/10 bg-foreground/5 px-8 py-12 backdrop-blur sm:px-14 sm:py-16"
+        className="mx-auto flex max-w-4xl flex-col gap-10 rounded-[36px] border border-muted/50 bg-surface px-8 py-12 shadow-[0_40px_80px_-60px_rgba(0,0,0,0.45)] sm:px-14 sm:py-16"
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
@@ -251,7 +251,7 @@ export function CheckoutSection({ items, onClear }: CheckoutSectionProps) {
           <h3 className="font-serif text-3xl tracking-tight sm:text-4xl">
             Seamless payment, delivered to your door.
           </h3>
-          <p className="text-sm leading-7 text-foreground/65 sm:text-base">
+          <p className="text-sm leading-7 text-foreground/70 sm:text-base">
             Use Tap-to-Pay on supported devices with Apple Pay or Google Pay, or
             transition to our hosted Stripe checkout for alternate methods. Your
             cart is reserved for ten minutes.
@@ -260,12 +260,12 @@ export function CheckoutSection({ items, onClear }: CheckoutSectionProps) {
 
         <div className="flex flex-col gap-6">
           {items.length === 0 ? (
-            <div className="rounded-3xl border border-dashed border-foreground/15 p-8 text-center text-sm text-foreground/50">
+            <div className="rounded-3xl border border-dashed border-muted/60 bg-background/50 p-8 text-center text-sm text-foreground/60">
               Select a cookie above to begin your tasting experience.
             </div>
           ) : (
-            <div className="rounded-3xl border border-foreground/10 bg-background/40 p-6 backdrop-blur">
-              <ul className="space-y-4 text-sm text-foreground/80">
+            <div className="rounded-3xl border border-muted/50 bg-background/40 p-6">
+              <ul className="space-y-4 text-sm text-foreground/75">
                 {items.map((item) => (
                   <li
                     key={item.id}
@@ -300,7 +300,7 @@ export function CheckoutSection({ items, onClear }: CheckoutSectionProps) {
             type="button"
             onClick={createCheckoutSession}
             disabled={items.length === 0 || loading}
-            className="inline-flex items-center justify-center rounded-full border border-foreground/20 bg-foreground/15 px-8 py-3 text-xs uppercase tracking-[0.4em] text-foreground transition hover:border-foreground/40 hover:bg-foreground/25 disabled:cursor-not-allowed disabled:border-foreground/10 disabled:bg-transparent disabled:text-foreground/30"
+            className="inline-flex items-center justify-center rounded-full border border-transparent bg-accent px-8 py-3 text-xs uppercase tracking-[0.4em] text-surface transition hover:bg-foreground hover:text-surface disabled:cursor-not-allowed disabled:bg-muted disabled:text-foreground/40"
           >
             {loading ? "Preparing..." : "Open Secure Checkout"}
           </button>

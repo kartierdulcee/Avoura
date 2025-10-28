@@ -6,7 +6,7 @@ import type { CSSProperties } from "react";
 
 const gradientStyles: CSSProperties = {
   background:
-    "radial-gradient(45% 60% at 50% 35%, rgba(199, 157, 86, 0.22), transparent 70%), radial-gradient(45% 65% at 30% 65%, rgba(242, 223, 200, 0.14), transparent 75%), radial-gradient(35% 45% at 70% 70%, rgba(199, 157, 86, 0.12), transparent 75%)",
+    "radial-gradient(45% 60% at 50% 35%, rgba(255, 79, 162, 0.22), transparent 70%), radial-gradient(45% 65% at 30% 65%, rgba(255, 255, 255, 0.18), transparent 75%), radial-gradient(35% 45% at 70% 70%, rgba(255, 79, 162, 0.15), transparent 75%)",
 };
 
 const rise = { opacity: 0, y: 30 };
@@ -35,7 +35,7 @@ export function Hero() {
 
       <div className="relative z-10 flex max-w-3xl flex-col items-center gap-10 text-center">
         <motion.span
-          className="gold-text text-sm tracking-[0.6em] uppercase"
+          className="accent-text text-sm tracking-[0.6em] uppercase"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
@@ -70,10 +70,10 @@ export function Hero() {
         >
           <Link
             href="#collection"
-            className="group inline-flex items-center justify-center rounded-full border border-foreground/20 bg-foreground/10 px-10 py-3 text-sm font-medium uppercase tracking-[0.4em] transition hover:border-foreground/40 hover:bg-foreground/15"
+            className="group inline-flex items-center justify-center rounded-full border border-transparent bg-accent px-10 py-3 text-sm font-medium uppercase tracking-[0.4em] text-surface transition hover:bg-foreground hover:text-surface"
           >
             Taste the Collection
-            <span className="ml-3 block h-[1px] w-12 origin-left scale-x-50 bg-foreground/50 transition group-hover:scale-x-100 group-hover:bg-foreground" />
+            <span className="ml-3 block h-[1px] w-12 origin-left scale-x-50 bg-surface/80 transition group-hover:scale-x-100 group-hover:bg-surface" />
           </Link>
         </motion.div>
 

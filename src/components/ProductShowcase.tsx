@@ -21,13 +21,13 @@ export function ProductShowcase({ onAdd }: ProductShowcaseProps) {
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       >
-        <p className="text-xs uppercase tracking-[0.5em] text-foreground/40">
+        <p className="text-xs uppercase tracking-[0.5em] text-accent">
           Signature Collection
         </p>
         <h2 className="mt-6 font-serif text-3xl tracking-tight text-foreground sm:text-5xl">
           A tasting flight of five couture cookies.
         </h2>
-        <p className="mt-4 text-sm leading-7 text-foreground/65 sm:text-base">
+        <p className="mt-4 text-sm leading-7 text-foreground/70 sm:text-base">
           Hand-batched in limited runs, each profile honours a distinct moment:
           dusk-lit terraces, midnight lounges, candlelit celebrations.
         </p>
