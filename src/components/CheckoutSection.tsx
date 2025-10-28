@@ -169,6 +169,10 @@ function PaymentRequestButtonInner({
 }
 
 const PaymentRequestButton = (props: PaymentRequestButtonProps) => {
+  if (props.amount <= 0 || props.items.length === 0) {
+    return null;
+  }
+
   if (!stripePromise) {
     return (
       <div className="rounded-3xl border border-dashed border-foreground/20 px-6 py-4 text-center text-xs text-foreground/45">
