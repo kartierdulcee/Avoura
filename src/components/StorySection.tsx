@@ -25,7 +25,7 @@ export function StorySection() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, amount: 0.6 }}
         >
-          The Auvora Story
+          About Auvora
         </motion.p>
 
         <motion.h3
@@ -35,9 +35,8 @@ export function StorySection() {
           transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, amount: 0.6 }}
         >
-          Handcrafted indulgence from Auvora Bakery. Every bite, a moment. We
-          source butter churned within 24 hours, rare cacao, and hand-picked
-          botanicals to build layers of texture that bloom with each pause.
+          Hey there, I'm a lifelong gluten-intolerant girl, 20-year vegetarian,
+          and cookie-obsessed taste-tester.
         </motion.h3>
 
         <motion.p
@@ -47,9 +46,41 @@ export function StorySection() {
           transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, amount: 0.6 }}
         >
-          Each batch rests for twenty-four hours to deepen flavor, baked at
-          dawn, and boxed in satin-lined keepsakes. Auvora is a celebration of
-          intentional pace - crafted to be savored, never rushed.
+          Growing up gluten-free, I got used to desserts that looked good but
+          tasted like cardboard. Every "treat" was more like a trick. After
+          years of searching for something actually delicious, I finally said,
+          forget this, I'll bake my own.
+        </motion.p>
+        <motion.p
+          className="mt-4 text-sm leading-7 text-foreground/70 sm:text-base"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          viewport={{ once: true, amount: 0.6 }}
+        >
+          Every cookie I make is packed with flavor, texture, and the kind of
+          joy that makes you close your eyes and smile.
+        </motion.p>
+        <motion.p
+          className="mt-4 text-sm leading-7 text-foreground/70 sm:text-base"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          viewport={{ once: true, amount: 0.6 }}
+        >
+          I created these cookies because I believe everyone deserves desserts
+          that make them feel included, happy, and a little spoiled. This isn't
+          just baking, it's me sharing a lifelong piece of who I am, one chewy,
+          golden bite at a time.
+        </motion.p>
+        <motion.p
+          className="mt-4 text-sm leading-7 text-foreground/70 sm:text-base"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          viewport={{ once: true, amount: 0.6 }}
+        >
+          Welcome to my gluten-free world. Grab a few cookies and stay awhile.
         </motion.p>
       </div>
     </section>

@@ -53,6 +53,9 @@ export function SiteFooter() {
           </Link>
         </nav>
       </div>
+      <p className="mt-4 text-xs uppercase tracking-[0.3em] text-foreground/45">
+        Not a nut free environment.
+      </p>
       <p className="mt-6 text-xs text-foreground/35">
         © {new Date().getFullYear()} Auvora. Crafted in small batches for those
         who linger.

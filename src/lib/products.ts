@@ -9,44 +9,76 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: "celestial-vanilla",
-    name: "Celestial Vanilla",
-    description: "Madagascar vanilla bean, cultured butter, flecks of Tahitian sea salt.",
-    price: 4200,
+    id: "gf-box-3",
+    name: "Gluten-Free Cookie Box · 3",
+    description:
+      "Signature Walnut Raisin, Oatmeal Raisin, and Chocolate Chip crafted on our gluten-free base.",
+    price: 800,
     image: "/images/celestial-vanilla.svg",
     accent: "from-[#ff4fa240] via-[#ffffff33] to-transparent",
   },
   {
-    id: "noir-cocoa",
-    name: "Noir Cacao",
-    description: "70% single-origin cacao layered with smoked caramel and cacao nib crunch.",
-    price: 4600,
+    id: "gf-box-6",
+    name: "Gluten-Free Cookie Box · 6",
+    description:
+      "Two of each gluten-free favorite: Walnut Raisin, Oatmeal Raisin, Chocolate Chip.",
+    price: 1600,
     image: "/images/noir-cacao.svg",
     accent: "from-[#ff4fa225] via-[#fce8d830] to-transparent",
   },
   {
-    id: "amber-pistachio",
-    name: "Amber Pistachio",
-    description: "Sicilian pistachio praline crowned with candied citrus and honeyed crumble.",
-    price: 4800,
+    id: "gf-box-12",
+    name: "Gluten-Free Cookie Box · 12",
+    description:
+      "Four of each of our gluten-free trio for gatherings that crave inclusive indulgence.",
+    price: 3200,
     image: "/images/amber-pistachio.svg",
     accent: "from-[#ff4fa235] via-[#ffffff26] to-transparent",
   },
   {
-    id: "midnight-espresso",
-    name: "Midnight Espresso",
-    description: "Dark roast espresso ganache with bourbon vanilla cream and cocoa dust.",
-    price: 4500,
+    id: "gf-tray-24",
+    name: "Gluten-Free Party Tray · 24",
+    description:
+      "Eight of each gluten-free cookie so every guest can taste all three classics.",
+    price: 6400,
     image: "/images/midnight-espresso.svg",
     accent: "from-[#ff4fa218] via-[#fce8d820] to-transparent",
   },
   {
-    id: "starlit-rose",
-    name: "Starlit Rose",
-    description: "Rose petal shortbread infused with champagne jam and candied petals.",
-    price: 5000,
+    id: "vegan-box-3",
+    name: "Gluten-Free + Vegan Box · 3",
+    description:
+      "Walnut Raisin, Oatmeal Raisin, and Chocolate Chip made with plant-based butter.",
+    price: 900,
     image: "/images/starlit-rose.svg",
     accent: "from-[#ff4fa240] via-[#ffffff40] to-transparent",
+  },
+  {
+    id: "vegan-box-6",
+    name: "Gluten-Free + Vegan Box · 6",
+    description:
+      "Two of each vegan-friendly cookie so no one misses out on dessert.",
+    price: 1800,
+    image: "/images/celestial-vanilla.svg",
+    accent: "from-[#ff4fa240] via-[#ffffff33] to-transparent",
+  },
+  {
+    id: "vegan-box-12",
+    name: "Gluten-Free + Vegan Box · 12",
+    description:
+      "Four of each vegan favorite for thoughtful celebrations and gifting.",
+    price: 3600,
+    image: "/images/noir-cacao.svg",
+    accent: "from-[#ff4fa225] via-[#fce8d830] to-transparent",
+  },
+  {
+    id: "vegan-tray-24",
+    name: "Gluten-Free + Vegan Party Tray · 24",
+    description:
+      "Eight of each plant-based cookie, ready for parties and corporate spreads.",
+    price: 7200,
+    image: "/images/amber-pistachio.svg",
+    accent: "from-[#ff4fa235] via-[#ffffff26] to-transparent",
   },
 ];
 

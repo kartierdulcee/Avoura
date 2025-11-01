@@ -5,6 +5,7 @@ import type { CartLineItem, Product } from "@/lib/products";
 import { Hero } from "./Hero";
 import { ProductShowcase } from "./ProductShowcase";
 import { CheckoutSection } from "./CheckoutSection";
+import { DetailsSection } from "./DetailsSection";
 import { StorySection } from "./StorySection";
 import { SiteFooter } from "./SiteFooter";
 
@@ -33,6 +34,7 @@ export function LandingPage() {
     <>
       <Hero />
       <ProductShowcase onAdd={handleAddToCart} />
+      <DetailsSection />
       <CheckoutSection items={items} onClear={clearCart} />
       <StorySection />
       <SiteFooter />

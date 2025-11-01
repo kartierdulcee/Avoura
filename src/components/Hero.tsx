@@ -49,7 +49,7 @@ export function Hero() {
           animate={riseVisible}
           transition={{ delay: 0.6, duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
-          Cookies, Elevated.
+          Gluten-Free Cookies, Elevated.
         </motion.h1>
 
         <motion.p
@@ -58,8 +58,9 @@ export function Hero() {
           animate={riseVisible}
           transition={{ delay: 0.9, duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
-          Auvora crafts indulgent cookies with couture precision - subtle motion,
-          rare ingredients, and effortless checkout for moments that linger.
+          Auvora bakes small-batch Walnut Raisin, Oatmeal Raisin, and Chocolate
+          Chip cookies—each available gluten-free or vegan and couriered across
+          Detroit with care.
         </motion.p>
 
         <motion.div
