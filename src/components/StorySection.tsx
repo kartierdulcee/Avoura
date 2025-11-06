@@ -35,8 +35,8 @@ export function StorySection() {
           transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, amount: 0.6 }}
         >
-          Hey there, I'm a lifelong gluten-intolerant girl, 20-year vegetarian,
-          and cookie-obsessed taste-tester.
+          I&rsquo;m a lifelong gluten-intolerant girl, 20-year vegetarian, and
+          cookie-obsessed taste tester.
         </motion.h3>
 
         <motion.p
@@ -46,10 +46,10 @@ export function StorySection() {
           transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, amount: 0.6 }}
         >
-          Growing up gluten-free, I got used to desserts that looked good but
-          tasted like cardboard. Every "treat" was more like a trick. After
+          Growing up gluten intolerant, I got used to desserts that looked good
+          but tasted like cardboard. Every treat felt more like a trick. After
           years of searching for something actually delicious, I finally said,
-          forget this, I'll bake my own.
+          forget this&mdash;I&rsquo;ll bake my own.
         </motion.p>
         <motion.p
           className="mt-4 text-sm leading-7 text-foreground/70 sm:text-base"
@@ -69,9 +69,9 @@ export function StorySection() {
           viewport={{ once: true, amount: 0.6 }}
         >
           I created these cookies because I believe everyone deserves desserts
-          that make them feel included, happy, and a little spoiled. This isn't
-          just baking, it's me sharing a lifelong piece of who I am, one chewy,
-          golden bite at a time.
+          that make them feel included, happy, and a little spoiled. This
+          isn&rsquo;t just baking, it&rsquo;s me sharing a lifelong piece of who
+          I am, one chewy, golden bite at a time.
         </motion.p>
         <motion.p
           className="mt-4 text-sm leading-7 text-foreground/70 sm:text-base"

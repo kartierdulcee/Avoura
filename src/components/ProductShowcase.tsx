@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { products, type Product } from "@/lib/products";
+import { products, type ProductSelection } from "@/lib/products";
 import { ProductCard } from "./ProductCard";
 
 type ProductShowcaseProps = {
-  onAdd: (product: Product) => void;
+  onAdd: (product: ProductSelection) => void;
 };
 
 export function ProductShowcase({ onAdd }: ProductShowcaseProps) {
@@ -25,12 +25,11 @@ export function ProductShowcase({ onAdd }: ProductShowcaseProps) {
           Cookie Menu
         </p>
         <h2 className="mt-6 font-serif text-3xl tracking-tight text-foreground sm:text-5xl">
-          Gluten-free indulgence, with vegan options for every gathering.
+          Gluten free indulgence, with vegan options for one or many.
         </h2>
         <p className="mt-4 text-sm leading-7 text-foreground/70 sm:text-base">
           Choose from Walnut Raisin, Oatmeal Raisin, and Chocolate Chip—available
-          in fully gluten-free boxes or plant-based batches so every guest feels
-          included.
+          in gluten free or vegan gluten free boxes so every guest feels included.
         </p>
       </motion.header>
 

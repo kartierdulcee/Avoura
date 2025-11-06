@@ -2,19 +2,35 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { formatCurrency } from "@/lib/currency";
-import type { Product } from "@/lib/products";
+import {
+  buildProductSelection,
+  productSizes,
+  productVariants,
+  type Product,
+  type ProductSelection,
+  type ProductSizeId,
+  type ProductVariantId,
+} from "@/lib/products";
 
 type ProductCardProps = {
   product: Product;
   index: number;
-  onAdd: (product: Product) => void;
+  onAdd: (product: ProductSelection) => void;
 };
 
 export function ProductCard({ product, index, onAdd }: ProductCardProps) {
   const [justAdded, setJustAdded] = useState(false);
+  const [selectedVariant, setSelectedVariant] =
+    useState<ProductVariantId>("gluten-free");
+  const [selectedSize, setSelectedSize] = useState<ProductSizeId>("box-3");
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const selectedProduct = useMemo(
+    () => buildProductSelection(product, selectedVariant, selectedSize),
+    [product, selectedVariant, selectedSize]
+  );
 
   useEffect(() => {
     return () => {
@@ -25,7 +41,7 @@ export function ProductCard({ product, index, onAdd }: ProductCardProps) {
   }, []);
 
   const handleAdd = () => {
-    onAdd(product);
+    onAdd(selectedProduct);
     setJustAdded(true);
     if (timeoutRef.current !== null) {
       clearTimeout(timeoutRef.current);
@@ -78,9 +94,57 @@ export function ProductCard({ product, index, onAdd }: ProductCardProps) {
           </p>
         </div>
 
+        <div className="flex flex-col gap-3 text-left">
+          <div className="flex flex-col gap-2">
+            <label
+              htmlFor={`${product.id}-variant`}
+              className="text-[10px] uppercase tracking-[0.4em] text-foreground/50"
+            >
+              Baking Style
+            </label>
+            <select
+              id={`${product.id}-variant`}
+              value={selectedVariant}
+              onChange={(event) =>
+                setSelectedVariant(event.target.value as ProductVariantId)
+              }
+              className="w-full rounded-full border border-muted/50 bg-background px-4 py-3 text-xs uppercase tracking-[0.3em] text-foreground/70 transition focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/50"
+            >
+              {productVariants.map((variant) => (
+                <option key={variant.id} value={variant.id}>
+                  {variant.label}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <label
+              htmlFor={`${product.id}-size`}
+              className="text-[10px] uppercase tracking-[0.4em] text-foreground/50"
+            >
+              Quantity
+            </label>
+            <select
+              id={`${product.id}-size`}
+              value={selectedSize}
+              onChange={(event) =>
+                setSelectedSize(event.target.value as ProductSizeId)
+              }
+              className="w-full rounded-full border border-muted/50 bg-background px-4 py-3 text-xs uppercase tracking-[0.3em] text-foreground/70 transition focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/50"
+            >
+              {productSizes.map((size) => (
+                <option key={size.id} value={size.id}>
+                  {size.label}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
         <div className="mt-auto flex items-center justify-between">
           <span className="font-sans text-sm uppercase tracking-[0.35em] text-foreground/60">
-            {formatCurrency(product.price)}
+            {formatCurrency(selectedProduct.price)}
           </span>
           <button
             type="button"
