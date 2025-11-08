@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import type { CSSProperties } from "react";
 
 const gradientStyles: CSSProperties = {
@@ -11,6 +12,13 @@ const gradientStyles: CSSProperties = {
 
 const rise = { opacity: 0, y: 30 };
 const riseVisible = { opacity: 1, y: 0 };
+
+const heroLogo = {
+  src: "/images/hero-logo.png",
+  width: 640,
+  height: 320,
+  alt: "Auvora signature logo",
+};
 
 export function Hero() {
   return (
@@ -60,8 +68,8 @@ export function Hero() {
         >
           Big flavor, zero gluten. Auvora delivers small batch and party trays
           of Walnut Raisin, Oatmeal Raisin, and Chocolate Chip cookies. No junk,
-          just crave-worthy bites that satisfy everyone. Order fresh for
-          same-day local delivery—happiness baked in.
+          just crave worthy bites that satisfy everyone. Order fresh for same
+          day local delivery, happiness baked in.
         </motion.p>
 
         <motion.div
@@ -88,6 +96,26 @@ export function Hero() {
           <span>Crafted for slow savoring</span>
           <span className="inline-flex h-12 w-[1px] bg-foreground/30" />
         </motion.div>
+
+        {heroLogo.src ? (
+          <motion.div
+            className="mt-10 flex w-full justify-center"
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.6, duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div className="relative w-full max-w-md sm:max-w-xl">
+              <Image
+                src={heroLogo.src}
+                alt={heroLogo.alt}
+                width={heroLogo.width}
+                height={heroLogo.height}
+                className="h-auto w-full object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.2)]"
+                priority
+              />
+            </div>
+          </motion.div>
+        ) : null}
       </div>
     </section>
   );

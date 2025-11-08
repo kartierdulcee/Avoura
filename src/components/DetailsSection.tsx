@@ -15,8 +15,8 @@ const deliveryRates = [
 ];
 
 const glutenFreeIngredients = [
-  "Gluten-free almond flour",
-  "Gluten-free chickpea flour",
+  "Gluten free almond flour",
+  "Gluten free chickpea flour",
   "Brown sugar",
   "Cane sugar",
   "Butter",
@@ -26,11 +26,11 @@ const glutenFreeIngredients = [
 ];
 
 const veganIngredients = [
-  "Gluten-free almond flour",
-  "Gluten-free chickpea flour",
+  "Gluten free almond flour",
+  "Gluten free chickpea flour",
   "Brown sugar",
   "Cane sugar",
-  "Plant-based butter",
+  "Plant based butter",
   "Real vanilla flavor",
   "Psyllium husk",
   "Baking powder",
@@ -63,8 +63,8 @@ export function DetailsSection() {
             Walnut Raisin, Oatmeal Raisin, and Chocolate Chip.
           </h2>
           <p className="mt-4 text-sm leading-7 text-foreground/70 sm:text-base">
-            Every batch starts with a small-batch gluten-free base. Select
-            classic butter or plant-based butter so both traditional and vegan
+            Every batch starts with a small batch gluten free base. Select
+            classic butter or plant based butter so both traditional and vegan
             cookie lovers can enjoy the same trio of cookies.
           </p>
         </motion.header>
@@ -75,7 +75,7 @@ export function DetailsSection() {
             className="rounded-[28px] border border-muted/60 bg-background/50 p-8"
           >
             <h3 className="font-serif text-2xl tracking-tight">
-              Gluten-Free Cookie Base
+              Gluten Free Cookie Base
             </h3>
             <ul className="mt-4 space-y-2 text-sm leading-6 text-foreground/70">
               {glutenFreeIngredients.map((ingredient) => (
@@ -92,7 +92,7 @@ export function DetailsSection() {
             className="rounded-[28px] border border-muted/60 bg-background/50 p-8"
           >
             <h3 className="font-serif text-2xl tracking-tight">
-              Gluten-Free + Vegan Cookie Base
+              Gluten Free + Vegan Cookie Base
             </h3>
             <ul className="mt-4 space-y-2 text-sm leading-6 text-foreground/70">
               {veganIngredients.map((ingredient) => (
@@ -112,7 +112,7 @@ export function DetailsSection() {
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <div>
               <h3 className="font-serif text-2xl tracking-tight">
-                Local delivery, two-hour target.
+                Local delivery, two hour target.
               </h3>
               <p className="mt-3 text-sm leading-6 text-foreground/70">
                 Standard orders typically arrive within two hours of ordering.

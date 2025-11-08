@@ -71,7 +71,7 @@ export const productSizes: ProductSize[] = [
   {
     id: "box-6",
     label: "Box of 6",
-    description: "Shareable half-dozen with room for seconds.",
+    description: "Shareable half dozen with room for seconds.",
   },
   {
     id: "box-12",
@@ -81,7 +81,7 @@ export const productSizes: ProductSize[] = [
   {
     id: "tray-24",
     label: "Party Tray of 24",
-    description: "Crowd-ready platter for gatherings.",
+    description: "Crowd ready platter for gatherings.",
   },
 ];
 
@@ -90,7 +90,7 @@ export const products: Product[] = [
     id: "walnut-raisin",
     name: "Walnut Raisin",
     description:
-      "Caramelized walnuts and sun-dried raisins folded into our signature chewy base.",
+      "Caramelized walnuts and sun dried raisins folded into our signature chewy base.",
     image: "/images/celestial-vanilla.svg",
     accent: "from-[#ff4fa240] via-[#ffffff33] to-transparent",
   },
@@ -106,7 +106,7 @@ export const products: Product[] = [
     id: "chocolate-chip",
     name: "Chocolate Chip",
     description:
-      "Single-origin dark chocolate shards swimming in vanilla-scented dough.",
+      "Single origin dark chocolate shards swimming in vanilla scented dough.",
     image: "/images/amber-pistachio.svg",
     accent: "from-[#ff4fa235] via-[#ffffff26] to-transparent",
   },

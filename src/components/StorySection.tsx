@@ -35,8 +35,8 @@ export function StorySection() {
           transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, amount: 0.6 }}
         >
-          I&rsquo;m a lifelong gluten-intolerant girl, 20-year vegetarian, and
-          cookie-obsessed taste tester.
+          I&rsquo;m a lifelong gluten intolerant girl, 20 year vegetarian, and
+          cookie obsessed taste tester.
         </motion.h3>
 
         <motion.p
@@ -49,7 +49,7 @@ export function StorySection() {
           Growing up gluten intolerant, I got used to desserts that looked good
           but tasted like cardboard. Every treat felt more like a trick. After
           years of searching for something actually delicious, I finally said,
-          forget this&mdash;I&rsquo;ll bake my own.
+          forget this, I&rsquo;ll bake my own.
         </motion.p>
         <motion.p
           className="mt-4 text-sm leading-7 text-foreground/70 sm:text-base"
@@ -80,7 +80,7 @@ export function StorySection() {
           transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, amount: 0.6 }}
         >
-          Welcome to my gluten-free world. Grab a few cookies and stay awhile.
+          Welcome to my gluten free world. Grab a few cookies and stay awhile.
         </motion.p>
       </div>
     </section>

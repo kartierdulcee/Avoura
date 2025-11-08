@@ -28,7 +28,7 @@ export function ProductShowcase({ onAdd }: ProductShowcaseProps) {
           Gluten free indulgence, with vegan options for one or many.
         </h2>
         <p className="mt-4 text-sm leading-7 text-foreground/70 sm:text-base">
-          Choose from Walnut Raisin, Oatmeal Raisin, and Chocolate Chip—available
+          Choose from Walnut Raisin, Oatmeal Raisin, and Chocolate Chip, available
           in gluten free or vegan gluten free boxes so every guest feels included.
         </p>
       </motion.header>

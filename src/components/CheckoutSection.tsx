@@ -176,7 +176,7 @@ const PaymentRequestButton = (props: PaymentRequestButtonProps) => {
   if (!stripePromise) {
     return (
       <div className="rounded-3xl border border-dashed border-muted/70 bg-background/40 px-6 py-4 text-center text-xs text-foreground/60">
-        Add your Stripe publishable key to enable Tap-to-Pay quick checkout.
+        Add your Stripe publishable key to enable Tap to Pay quick checkout.
       </div>
     );
   }
@@ -252,7 +252,7 @@ export function CheckoutSection({ items, onClear }: CheckoutSectionProps) {
             Seamless payment, delivered to your door.
           </h3>
           <p className="text-sm leading-7 text-foreground/70 sm:text-base">
-            Use Tap-to-Pay on supported devices with Apple Pay or Google Pay, or
+            Use Tap to Pay on supported devices with Apple Pay or Google Pay, or
             transition to our hosted Stripe checkout for alternate methods. Your
             cart is reserved for ten minutes.
           </p>
