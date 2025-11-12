@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stripe Checkout Sample</title>
+    <style>
+      :root {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #111;
+        background: #f2f2f2;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      main {
+        background: #fff;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 20px 50px rgb(0 0 0 / 0.08);
+        width: min(400px, 90vw);
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      label {
+        font-weight: 600;
+      }
+      input {
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+      }
+      button {
+        padding: 0.85rem 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        font-weight: 600;
+        font-size: 1rem;
+        background: #111;
+        color: #fff;
+        cursor: pointer;
+      }
+      p {
+        margin: 0.5rem 0 0;
+        font-size: 0.95rem;
+      }
+      #error {
+        color: #b91c1c;
+        min-height: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Sample Checkout</h1>
+      <form id="checkout-form">
+        <label for="zip">ZIP Code</label>
+        <input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" placeholder="Enter ZIP" required />
+        <button type="submit">Checkout</button>
+      </form>
+      <p id="error"></p>
+    </main>
+    <script>
+      const form = document.getElementById("checkout-form");
+      const errorEl = document.getElementById("error");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        errorEl.textContent = "";
+        const zip = form.zip.value.trim();
+
+        if (!zip) {
+          errorEl.textContent = "Please provide a ZIP code.";
+          return;
+        }
+
+        try {
+          const response = await fetch("/create-checkout-session", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ zip }),
+          });
+          const data = await response.json();
+
+          if (!response.ok || !data?.url) {
+            throw new Error(data?.error ?? "Unable to create session.");
+          }
+
+          window.location.href = data.url;
+        } catch (error) {
+          errorEl.textContent = error instanceof Error ? error.message : "Unexpected error.";
+        }
+      });
+    </script>
+  </body>
+</html>
