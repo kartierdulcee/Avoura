@@ -86,7 +86,7 @@ function PaymentRequestButtonInner({
         const response = await fetch("/api/payment-intent", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ items: lineItems }),
+          body: JSON.stringify({ items: lineItems }),
         });
 
         if (!response.ok) {
