@@ -34,8 +34,15 @@ The project uses the Next.js App Router. All sections live inside `src/component
 | `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Stripe publishable key used on the client for Elements and Tap-to-Pay. |
 | `STRIPE_SECRET_KEY` | Stripe secret key for creating Checkout sessions and PaymentIntents. |
 | `NEXT_PUBLIC_SITE_URL` | (Optional) Absolute production URL for generating Stripe success/cancel redirects. |
+| `STRIPE_PRICE_<SELECTION_ID>` | Price IDs for each product/variant/size combination used at Checkout. Example: `STRIPE_PRICE_OATMEAL_RAISIN_GLUTEN_FREE_BOX_3=price_123`. |
 
 > Apple Pay and Google Pay require a verified domain. Stripe's dashboard includes step-by-step domain verification for Tap-to-Pay.
+
+### Configuring reusable Stripe Prices
+1. In the Stripe Dashboard (Live mode), create a **Product** for each flavor/variant/size you plan to sell (e.g., “Oatmeal Raisin · Gluten Free · Box of 3”) and assign a recurring **Price** with the correct USD amount.
+2. Copy every generated `price_xxx` identifier and store it in `.env.local` (and your hosting provider) using the naming pattern `STRIPE_PRICE_<PRODUCT>_<VARIANT>_<SIZE>` where each part is uppercase and uses underscores instead of hyphens.
+   - Example selection id `oatmeal-raisin-gluten-free-box-3` maps to `STRIPE_PRICE_OATMEAL_RAISIN_GLUTEN_FREE_BOX_3`.
+3. Redeploy. The server now looks up the official Price ID for each cart item, so Checkout is always tied to catalogued Stripe SKUs.
 
 ## 💳 Stripe Configuration
 - Checkout flow: `/api/checkout` creates a Stripe Checkout Session.

@@ -141,3 +141,27 @@ export function buildProductSelection(
     sizeLabel: size.label,
   };
 }
+
+let selectionCache: Map<string, ProductSelection> | null = null;
+
+function buildSelectionCache() {
+  const cache = new Map<string, ProductSelection>();
+  for (const product of products) {
+    for (const variant of productVariants) {
+      for (const size of productSizes) {
+        const selection = buildProductSelection(product, variant.id, size.id);
+        cache.set(selection.id, selection);
+      }
+    }
+  }
+  return cache;
+}
+
+export function getProductSelectionById(
+  selectionId: string
+): ProductSelection | undefined {
+  if (!selectionCache) {
+    selectionCache = buildSelectionCache();
+  }
+  return selectionCache.get(selectionId);
+}

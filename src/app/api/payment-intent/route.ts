@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
 import { getStripeClient } from "@/lib/stripe";
+import { getProductSelectionById } from "@/lib/products";
 
 type RequestItem = {
   id: string;
-  name: string;
   quantity: number;
-  price: number;
 };
 
 export async function POST(request: Request) {
@@ -23,9 +22,19 @@ export async function POST(request: Request) {
   }
 
   const amount = items.reduce((total, item) => {
-    const quantity = Number(item.quantity ?? 0);
-    const price = Number(item.price ?? 0);
-    return total + Math.max(0, quantity) * Math.max(0, price);
+    const selection = getProductSelectionById(item.id);
+    if (!selection) {
+      throw new Error(`Unknown item "${item.id}".`);
+    }
+    const quantityNumber = Number(item.quantity ?? 0);
+    const quantity =
+      Number.isFinite(quantityNumber) && quantityNumber > 0
+        ? Math.floor(quantityNumber)
+        : 0;
+    if (quantity === 0) {
+      throw new Error(`Invalid quantity for "${selection.name}".`);
+    }
+    return total + quantity * selection.price;
   }, 0);
 
   if (amount === 0) {

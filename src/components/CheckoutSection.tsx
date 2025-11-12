@@ -47,9 +47,7 @@ function PaymentRequestButtonInner({
     () =>
       items.map((item) => ({
         id: item.id,
-        name: item.name,
         quantity: item.quantity,
-        price: item.price,
       })),
     [items]
   );
@@ -88,7 +86,7 @@ function PaymentRequestButtonInner({
         const response = await fetch("/api/payment-intent", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ items: lineItems }),
+        body: JSON.stringify({ items: lineItems }),
         });
 
         if (!response.ok) {
@@ -210,9 +208,7 @@ export function CheckoutSection({ items, onClear }: CheckoutSectionProps) {
         body: JSON.stringify({
           items: items.map((item) => ({
             id: item.id,
-            name: item.name,
             quantity: item.quantity,
-            price: item.price,
           })),
         }),
       });
