@@ -4,7 +4,7 @@ import { getStripeClient } from "@/lib/stripe";
 const BASE_PRODUCT_PRICE = 10_00;
 const SHIPPING_INSIDE_LIST_PRICE = 1_00;
 const SHIPPING_OUTSIDE_LIST_PRICE = 2_00;
-const DISCOUNTED_ZIPS = ["0000", "0000", "0000", "000"] as const; // Replace with real ZIP codes.
+const DISCOUNTED_ZIPS = ["0000", "0000", "0000", "000"] satisfies readonly string[]; // Replace with real ZIP codes.
 
 export async function POST(request: Request) {
   let zip: string | undefined;
