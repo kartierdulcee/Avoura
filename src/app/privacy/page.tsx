@@ -12,10 +12,10 @@ export default function PrivacyPolicyPage() {
         <p className="text-sm leading-7 text-foreground/70 sm:text-base">
           For the full policy or data requests, write to{" "}
           <a
-            href="mailto:privacy@auvora.com"
+            href="mailto:privacy@auvorabakery.com"
             className="underline decoration-foreground/40 transition hover:decoration-foreground"
           >
-            privacy@auvora.com
+            privacy@auvorabakery.com
           </a>
           .
         </p>
