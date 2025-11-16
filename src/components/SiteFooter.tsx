@@ -57,7 +57,7 @@ export function SiteFooter() {
           ))}
           <div className="flex gap-3">
             <Link
-              href="https://instagram.com/auvora"
+              href="https://instagram.com/auvorabakery"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-accent/60 text-accent transition hover:border-accent hover:text-foreground"
@@ -66,7 +66,7 @@ export function SiteFooter() {
               <InstagramIcon />
             </Link>
             <Link
-              href="https://www.tiktok.com/@auvora"
+              href="https://www.tiktok.com/@auvora.gf.vegan.c"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-accent/60 text-accent transition hover:border-accent hover:text-foreground"
