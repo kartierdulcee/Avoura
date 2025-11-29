@@ -2,9 +2,20 @@
 
 import Link from "next/link";
 
+const CONTACT_NUMBER = "3134059637";
+const CONTACT_DISPLAY = "(313) 405-9637";
 const links = [
   { href: "#story", label: "About" },
-  { href: "mailto:concierge@auvora.com", label: "Contact" },
+  {
+    href: `tel:+1${CONTACT_NUMBER}`,
+    label: "Contact",
+    ariaLabel: `Call ${CONTACT_DISPLAY}`,
+  },
+  {
+    href: `sms:+1${CONTACT_NUMBER}`,
+    label: "Text",
+    ariaLabel: `Text ${CONTACT_DISPLAY}`,
+  },
   { href: "/privacy", label: "Privacy" },
 ];
 
@@ -50,6 +61,7 @@ export function SiteFooter() {
             <Link
               key={link.label}
               href={link.href}
+              aria-label={link.ariaLabel}
               className="transition hover:text-accent"
             >
               {link.label}

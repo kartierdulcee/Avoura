@@ -30,7 +30,7 @@ const veganIngredients = [
   "Gluten free chickpea flour",
   "Brown sugar",
   "Cane sugar",
-  "Plant based butter",
+  "Sunflower oil",
   "Real vanilla flavor",
   "Psyllium husk",
   "Baking powder",
@@ -64,8 +64,8 @@ export function DetailsSection() {
           </h2>
           <p className="mt-4 text-sm leading-7 text-foreground/70 sm:text-base">
             Every batch starts with a small batch gluten free base. Select
-            classic butter or plant based butter so both traditional and vegan
-            cookie lovers can enjoy the same trio of cookies.
+            classic butter or sunflower oil so both traditional and vegan cookie
+            lovers can enjoy the same trio of cookies.
           </p>
         </motion.header>
 
